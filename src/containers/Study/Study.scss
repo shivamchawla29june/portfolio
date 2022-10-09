@@ -1,0 +1,55 @@
+.app__study{
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__profilesStudy{
+    // display: flex;
+    // justify-content: center;
+    // align-content: flex-start;
+    // flex-wrap: wrap;
+    // margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.app__profileStudy-item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2rem;
+
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50;
+        object-fit: contain;
+        align-content: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 2000px) {
+        width: 370px;
+        margin: 2rem 4rem;
+
+        img{
+            height: 320px;
+        }
+    }
+}
+
+.app__profile-item-data{
+    // width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+    margin: 1rem;
+}
