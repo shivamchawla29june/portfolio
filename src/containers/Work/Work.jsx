@@ -130,13 +130,13 @@ const Work = () => {
         </motion.div>
       </div>
       <div className="app__work-content app__flex">
-        <h4 className="bold-text">{work.title}</h4>
-        <p className="p-text" style={{ marginTop: 10 }}>
+        <h4 className="bold-text" style={{fontSize: "1rem"}}>{work.title}</h4>
+        <p className="p-text" style={{ marginTop: 10, fontSize: "0.8rem" }}>
           {work.description}
         </p>
 
         <div className="app__work-tag app__flex">
-          <p className="p-text">{work.tags[0]}</p>
+          <p className="p-text" style={{fontSize: "0.8rem"}}>{work.tags[0]}</p>
         </div>
       </div>
     </div>
@@ -195,14 +195,14 @@ const Work = () => {
               </a>
             </motion.div>
           </div>
-          <div className="app__work-content app__flex">
-            <h4 className="bold-text">{work.title}</h4>
-            <p className="p-text" style={{ marginTop: 10 }}>
+          <div className="app__work-content app__flex" style={{overflow:"visible"}}>
+            <h4 className="bold-text" style={{fontSize: "1rem"}}>{work.title}</h4>
+            <p className="p-text" style={{ marginTop: 10, fontSize:"0.8rem"}}>
               {work.description}
             </p>
 
             <div className="app__work-tag app__flex">
-              <p className="p-text">{work.tags[0]}</p>
+              <p className="p-text" style={{fontSize: "0.8rem"}}>{work.tags[0]}</p>
             </div>
           </div>
         </div>
@@ -220,6 +220,7 @@ const Work = () => {
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
+            style={{fontSize: "0.8rem"}}
             className=
             {`app__work-filter-item app_flex p-text ${
               activeFilter === item ? "item-active" : ""

@@ -32,23 +32,23 @@ const Study = () => {
             <img src={urlFor(stu.imgUrl)} alt={stu.title} />
 
             <div className="app__profile-item-data">
-            <h1 className="bold-text" style={{ marginTop: 20 }}>
+            <h1 className="bold-text">
               {stu.title}
             </h1>
             <p className="p-text" style={{ marginTop: 10 }}>
-            <span style={{ fontWeight: "bold" }}>Degree: </span>{stu.degree}
+            <span style={{ fontWeight: "bold", color: "black" }}>Degree: </span>{stu.degree}
             </p>
             <p className="p-text" style={{ marginTop: 10 }}>
-            <span style={{ fontWeight: "bold" }}>Field of Study: </span>{stu.specialization}
+            <span style={{ fontWeight: "bold", color: "black" }}>Field of Study: </span>{stu.specialization}
             </p>
             <p className="p-text" style={{ marginTop: 10 }}>
-              <span style={{ fontWeight: "bold" }}>Course Work: </span>{stu.description}
+              <span style={{ fontWeight: "bold", color: "black" }}>Course Work: </span>{stu.description}
             </p>
             <p className="p-text" style={{ marginTop: 10 }}>
-            <span style={{ fontWeight: "bold" }}>GPA: </span>{stu.gpa}
+            <span style={{ fontWeight: "bold", color: "black" }}>GPA: </span>{stu.gpa}
             </p>
             <p className="p-text" style={{ marginTop: 10 }}>
-            <span style={{ fontWeight: "bold" }}>Year: </span>{stu.year}
+            <span style={{ fontWeight: "bold", color: "black" }}>Year: </span>{stu.year}
             </p>
             </div>
           </motion.div>

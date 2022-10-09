@@ -28,8 +28,8 @@
 
     img{
         width: 200px;
-        height: 200px;
-        border-radius: 50;
+        vertical-align: middle;
+        border-radius: 20%;
         object-fit: contain;
         align-content: center;
         justify-content: center;
@@ -52,4 +52,5 @@
     align-content: flex-start;
     flex-direction: column;
     margin: 1rem;
+    vertical-align: middle;
 }

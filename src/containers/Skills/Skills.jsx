@@ -26,9 +26,7 @@ const Skills = () => {
   }, []);
 
 
-  console.log(experience);
-  experience.sort((a,b) => a.year - b.year);
-  console.log("here", experience)
+  experience.sort((a,b) => -(a.year - b.year));
 
   return (
     <>
