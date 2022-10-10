@@ -25,7 +25,7 @@ const Skills = () => {
       setSkills(data);
     });
   }, []);
-  
+
   skills.sort((a, b) => a.name.length - b.name.length);
   experience.sort((a, b) => -(a.year - b.year));
 
@@ -41,7 +41,7 @@ const Skills = () => {
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className="app__skills-item app__flex"
-              key={skill.name}
+              key={skill._id}
             >
               <div
                 className="app__flex"
@@ -50,13 +50,13 @@ const Skills = () => {
                 <img src={urlFor(skill.icon)} alt="skill" />
               </div>
               <p className="p-text">{skill.name}</p>
-              <ProgressBar key={skill.name} completed={skill.proficiency} />
+              <ProgressBar key={skill._id} completed={skill.proficiency} />
             </motion.div>
           ))}
         </motion.div>
         <motion.div className="app__skills-exp">
           {experience?.map((experience) => (
-            <motion.div className="app__skills-exp-item" key={experience.year}>
+            <motion.div className="app__skills-exp-item" key={experience._id}>
               <div className="app__skills-exp-year">
                 <p className="p-text">{experience.year}</p>
               </div>
@@ -67,7 +67,7 @@ const Skills = () => {
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work app__flex"
-                      key={work.name}
+                      key={work._key}
                       data-tip
                       data-for={work.name}
                     >
@@ -76,7 +76,7 @@ const Skills = () => {
                       {/* <p className="p-text">{work.desc}</p> */}
                     </motion.div>
                     <ReactTooltip
-                      id={work.name}
+                      id={work._key}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
