@@ -213,7 +213,7 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">This is <span>How</span> I spend my <span>time</span>.{" "}
+      <h2 className="head-text">Here are some of my <span>Projects</span>.{" "}
       </h2>
       <div className="app__work-filter">
         {["AI","React","JavaScript", "PHP","Python", "Embedded","All"].map((item, index) => (

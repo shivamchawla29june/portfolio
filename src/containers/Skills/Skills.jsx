@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 
 import ReactTooltip from "react-tooltip";
 
@@ -47,6 +48,7 @@ const Skills = () => {
                 <img src={urlFor(skill.icon)} alt="skill" />
               </div>
               <p className="p-text">{skill.name}</p>
+              <ProgressBar key={skill.name} completed={skill.proficiency} />
             </motion.div>
           ))}
         </motion.div>
@@ -91,4 +93,4 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Skills, "app__skills"), "skills", "app__primarybg");
+export default AppWrap(MotionWrap(Skills, "app__skills"), "skills", "app__whitebg");

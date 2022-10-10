@@ -14,6 +14,11 @@ export default{
             type:'string'
         },
         {
+            name:'proficiency',
+            title:'Profiency',
+            type:'number'
+        },
+        {
             name:'icon',
             title:'Icon',
             type: 'image',

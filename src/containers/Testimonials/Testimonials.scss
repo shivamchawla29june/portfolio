@@ -19,7 +19,7 @@
     img {
       width: 100px;
       height: 100px;
-      border-radius: 50%;
+      // border-radius: 50%;
       object-fit: cover;
     }
   
@@ -134,12 +134,12 @@
         width: 100%;
         height: auto;
         object-fit: cover;
-        filter: grayscale(1);
+        filter: grayscale(0);
       }
   
       &:hover {
         img {
-          filter: grayscale(0);
+          filter: grayscale(1);
         }
       }
   

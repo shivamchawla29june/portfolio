@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faUser, faEnvelope, faBuildingColumns, faInfo, faBrain, faPen, faListCheck} from "@fortawesome/free-solid-svg-icons";
+import { faHome, faUser, faEnvelope, faBriefcase, faBuildingColumns, faUsersViewfinder, faInfo, faBrain, faPen, faListCheck} from "@fortawesome/free-solid-svg-icons";
 
 import { AiFillHome } from 'react-icons/ai';
 
@@ -19,16 +19,21 @@ const NavigationDots = ({ active }) => {
         <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </NavLink></span>
         <span title="Projects"><NavLink className="app__social-nav" to="/work" style={active === "work"? {backgroundColor: "#D3D3D3"}:{}}>
-        <FontAwesomeIcon icon={faPen} color="#4d4d4e" />
+        <FontAwesomeIcon icon={faListCheck} color="#4d4d4e" />
         </NavLink>
         </span>
         <span title="Skills and Experience">
         <NavLink className="app__social-nav" to="/skills" style={active === "skills"? {backgroundColor: "#D3D3D3"}:{}}>
-       <FontAwesomeIcon icon={faBrain} color="#4d4d4e" />
+       <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
         </NavLink></span>
         <span title="Education">
         <NavLink className="app__social-nav" to="/study" style={active === "study"? {backgroundColor: "#D3D3D3"}:{}}>
         <FontAwesomeIcon icon={faBuildingColumns} color="#4d4d4e"/>
+        </NavLink>
+        </span>
+        <span title="Testimonials">
+        <NavLink className="app__social-nav" to="/testimonials" style={active === "testimonials"? {backgroundColor: "#D3D3D3"}:{}}>
+        <FontAwesomeIcon icon={faUsersViewfinder} color="#4d4d4e"/>
         </NavLink>
         </span>
         <span title="Contact">
