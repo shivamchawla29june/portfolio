@@ -25,8 +25,8 @@ const Skills = () => {
       setSkills(data);
     });
   }, []);
-
-  skills.sort();
+  
+  skills.sort((a, b) => a.name.length - b.name.length);
   experience.sort((a, b) => -(a.year - b.year));
 
   return (

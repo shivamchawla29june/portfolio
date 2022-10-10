@@ -22,11 +22,10 @@ import {
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  console.log(toggle);
 
   return (
     <nav className="app__navbar">
-      <NavLink exact="true" to="/" style={{ all: "revert" }}>
+      <NavLink exact="true" to="/" style={{ borderStyle: "none" }}>
         <div className="app__navbar-logo">
           <img src={images.navbarlogo} alt="logo" />
         </div>
@@ -92,15 +91,17 @@ const Navbar = () => {
             activeClassName="active"
             to="/contact"
             className="app__flex p-text app__navbar-links-a"
-          ></NavLink>
+          >
+            Contact
+          </NavLink>
         </li>
       </ul>
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
         {toggle && (
           <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
+          // whileInView={{ x: [300, 0] }}
+          // transition={{ duration: 100000, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
             <ul className="app__navbar-links">
