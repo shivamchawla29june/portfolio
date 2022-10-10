@@ -66,7 +66,7 @@
     font-size: 4rem;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 400px) {
     font-size: 2rem;
   }
 }
@@ -92,7 +92,7 @@
     font-size: 2rem;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 400px) {
     font-size: 0.9rem;
   }
 }
@@ -186,8 +186,12 @@
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .app__social {
+    display: none;
+  }
+
+  .app__navigation {
     display: none;
   }
 

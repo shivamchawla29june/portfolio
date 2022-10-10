@@ -22,6 +22,7 @@ import {
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  console.log(toggle);
 
   return (
     <nav className="app__navbar">
@@ -91,9 +92,7 @@ const Navbar = () => {
             activeClassName="active"
             to="/contact"
             className="app__flex p-text app__navbar-links-a"
-          >
-            Contact{" "}
-          </NavLink>
+          ></NavLink>
         </li>
       </ul>
       <div className="app__navbar-menu">
@@ -105,14 +104,77 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul className="app__navbar-links">
-              {["home", "about", "work", "skills", "contact"].map((item) => (
-                <li className="app__flex p-text" key={`link-${item}`}>
-                  <div />
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <NavLink
+                  exact="true"
+                  activeClassName="active"
+                  className="app__flex p-text"
+                  to="/"
+                  onClick={() => setToggle(false)}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  className="app__flex p-text"
+                  to="/about"
+                  onClick={() => setToggle(false)}
+                >
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  className="app__flex p-text"
+                  to="/work"
+                  onClick={() => setToggle(false)}
+                >
+                  Projects
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  className="app__flex p-text"
+                  to="/skills"
+                  onClick={() => setToggle(false)}
+                >
+                  Skills & Experience
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  className="app__flex p-text"
+                  to="/study"
+                  onClick={() => setToggle(false)}
+                >
+                  Education
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  className="app__flex p-text"
+                  to="/testimonials"
+                  onClick={() => setToggle(false)}
+                >
+                  Testimonials
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  to="/contact"
+                  className="app__flex p-text"
+                  onClick={() => setToggle(false)}
+                >
+                  Contact
+                </NavLink>
+              </li>
             </ul>
           </motion.div>
         )}
