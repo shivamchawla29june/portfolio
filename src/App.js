@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
 import {
   About,
@@ -17,6 +17,7 @@ import "./App.scss";
 const App = () => {
   return (
     <div className="app">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Header />} />
         <Route path="/about" element={<About />} />
@@ -25,14 +26,15 @@ const App = () => {
         <Route path="/study" element={<Study />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/contact" element={<Footer />} />
-      </Routes>
+        </Routes>
       {/* <Navbar />
       <Header />
-      <About />
+      <About id="about"/>
       <Work />
-      <Skills /> */}
-      {/* <Testimonials /> */}
-      {/* <Footer /> */}
+      <Skills />
+      <Study />
+      <Testimonials />
+      <Footer /> */}
     </div>
   );
 };

@@ -87,8 +87,9 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+        {/* <div className="app__skills-detail" style={{color:"black"}}>Hover on Title for Details.</div> */}
       </div>
-      <div className="app__skills-detail">Hover on Title for Details.</div>
+      
     </>
   );
 };
