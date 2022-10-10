@@ -62,16 +62,16 @@ const Work = () => {
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
-    setAnimateCard([{y:100, opacity:0}]);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
     setTimeout(() => {
-      setAnimateCard([{y:0, opacity: 1}]);
-      if(item === "All"){
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+      if (item === "All") {
         setFilterWork(works);
-      }else{
+      } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
       }
-    }, 500)
+    }, 500);
   };
   // const [wid,setWid] = useState(0);
   // const carousel1 = useRef();
@@ -79,78 +79,12 @@ const Work = () => {
   //   console.log(carousel1.current.offsetWidth, carousel1.current.scrollWidth, carousel1)
   //   setWid(carousel1.current.scrollWidth + carousel1.current.offsetLeft)
   // },[])
-  let work =     <motion.div
-
-  animate={animateCard}
-  transition={{ duration: 0.5, delayChildren: 0.5 }}
-  className="app__work-portfolio"
-  style={{flexWrap: "wrap", overflow: "auto"}}
->
-  {filterWork.map((work, index) => (
-    <div className="app__work-item app__flex" key={index}>
-      <div className="app__work-img app__flex">
-        <img src={urlFor(work.imgUrl)} alt={work.name} />
-        <motion.div
-          whileHover={{ opacity: [0, 1] }}
-          transition={{
-            duration: 0.25,
-            ease: "easeInOut",
-            staggerChildren: 0.5,
-          }}
-          className="app__work-hover app__flex"
-        >
-          <a href={work.projectLink} target="_blank" rel="noreferer">
-            <motion.div
-              whileHover={{ scale: [1, 0.9] }}
-              whileInView={{ scale: [0, 1] }}
-              transition={{
-                duration: 0.25,
-                ease: "easeInOut",
-                staggerChildren: 0.5,
-              }}
-              className="app__flex"
-            >
-              <AiFillEye />
-            </motion.div>
-          </a>
-          <a href={work.codeLink} target="_blank" rel="noreferer">
-            <motion.div
-              whileHover={{ scale: [1, 0.9] }}
-              whileInView={{ scale: [0, 1] }}
-              transition={{
-                duration: 0.25,
-                ease: "easeInOut",
-                staggerChildren: 0.5,
-              }}
-              className="app__flex"
-            >
-              <AiFillGithub />
-            </motion.div>
-          </a>
-        </motion.div>
-      </div>
-      <div className="app__work-content app__flex">
-        <h4 className="bold-text" style={{fontSize: "1rem"}}>{work.title}</h4>
-        <p className="p-text" style={{ marginTop: 10, fontSize: "0.8rem" }}>
-          {work.description}
-        </p>
-
-        <div className="app__work-tag app__flex">
-          <p className="p-text" style={{fontSize: "0.8rem"}}>{work.tags[0]}</p>
-        </div>
-      </div>
-    </div>
-  ))}
-</motion.div>
-  if(filterWork.length >5){
-    work =       <motion.div className="app__work-carousel">
+  let work = (
     <motion.div
-      drag="x"
-      dragConstraints={{right:1300, left:-1300}}
-      dragElastic={0.4}
       animate={animateCard}
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__work-portfolio"
+      style={{ flexWrap: "wrap", overflow: "auto" }}
     >
       {filterWork.map((work, index) => (
         <div className="app__work-item app__flex" key={index}>
@@ -195,44 +129,133 @@ const Work = () => {
               </a>
             </motion.div>
           </div>
-          <div className="app__work-content app__flex" style={{overflow:"visible"}}>
-            <h4 className="bold-text" style={{fontSize: "1rem"}}>{work.title}</h4>
-            <p className="p-text" style={{ marginTop: 10, fontSize:"0.8rem"}}>
+          <div className="app__work-content app__flex">
+            <h4 className="bold-text" style={{ fontSize: "1rem" }}>
+              {work.title}
+            </h4>
+            <p className="p-text" style={{ marginTop: 10, fontSize: "0.8rem" }}>
               {work.description}
             </p>
 
             <div className="app__work-tag app__flex">
-              <p className="p-text" style={{fontSize: "0.8rem"}}>{work.tags[0]}</p>
+              <p className="p-text" style={{ fontSize: "0.8rem" }}>
+                {work.tags[0]}
+              </p>
             </div>
           </div>
         </div>
       ))}
     </motion.div>
-    </motion.div>
+  );
+  if (filterWork.length > 5) {
+    work = (
+      <motion.div className="app__work-carousel">
+        <motion.div
+          drag="x"
+          dragConstraints={{ right: 1300, left: -1300 }}
+          dragElastic={0.4}
+          animate={animateCard}
+          transition={{ duration: 0.5, delayChildren: 0.5 }}
+          className="app__work-portfolio"
+        >
+          {filterWork.map((work, index) => (
+            <div className="app__work-item app__flex" key={index}>
+              <div className="app__work-img app__flex">
+                <img src={urlFor(work.imgUrl)} alt={work.name} />
+                <motion.div
+                  whileHover={{ opacity: [0, 1] }}
+                  transition={{
+                    duration: 0.25,
+                    ease: "easeInOut",
+                    staggerChildren: 0.5,
+                  }}
+                  className="app__work-hover app__flex"
+                >
+                  <a href={work.projectLink} target="_blank" rel="noreferer">
+                    <motion.div
+                      whileHover={{ scale: [1, 0.9] }}
+                      whileInView={{ scale: [0, 1] }}
+                      transition={{
+                        duration: 0.25,
+                        ease: "easeInOut",
+                        staggerChildren: 0.5,
+                      }}
+                      className="app__flex"
+                    >
+                      <AiFillEye />
+                    </motion.div>
+                  </a>
+                  <a href={work.codeLink} target="_blank" rel="noreferer">
+                    <motion.div
+                      whileHover={{ scale: [1, 0.9] }}
+                      whileInView={{ scale: [0, 1] }}
+                      transition={{
+                        duration: 0.25,
+                        ease: "easeInOut",
+                        staggerChildren: 0.5,
+                      }}
+                      className="app__flex"
+                    >
+                      <AiFillGithub />
+                    </motion.div>
+                  </a>
+                </motion.div>
+              </div>
+              <div
+                className="app__work-content app__flex"
+                style={{ overflow: "visible" }}
+              >
+                <h4 className="bold-text" style={{ fontSize: "1rem" }}>
+                  {work.title}
+                </h4>
+                <p
+                  className="p-text"
+                  style={{ marginTop: 10, fontSize: "0.8rem" }}
+                >
+                  {work.description}
+                </p>
+
+                <div className="app__work-tag app__flex">
+                  <p className="p-text" style={{ fontSize: "0.8rem" }}>
+                    {work.tags[0]}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </motion.div>
+    );
   }
 
   return (
     <>
-      <h2 className="head-text">Here are some of my <span>Projects</span>.{" "}
+      <h2 className="head-text">
+        Here are some of my <span>Projects</span>.{" "}
       </h2>
       <div className="app__work-filter">
-        {["AI","React","JavaScript", "PHP","Python", "Embedded","All"].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleWorkFilter(item)}
-            style={{fontSize: "0.8rem"}}
-            className=
-            {`app__work-filter-item app_flex p-text ${
-              activeFilter === item ? "item-active" : ""
-            }`}>{item}
-          </div>
-        ))}
+        {["AI", "React", "JavaScript", "PHP", "Python", "Embedded", "All"].map(
+          (item, index) => (
+            <div
+              key={index}
+              onClick={() => handleWorkFilter(item)}
+              style={{ fontSize: "0.8rem" }}
+              className={`app__work-filter-item app_flex p-text ${
+                activeFilter === item ? "item-active" : ""
+              }`}
+            >
+              {item}
+            </div>
+          )
+        )}
       </div>
       {work}
-
-      
     </>
   );
 };
 
-export default AppWrap(MotionWrap(Work, "app__works"), "work", "app__primarybg");
+export default AppWrap(
+  MotionWrap(Work, "app__works"),
+  "work",
+  "app__primarybg"
+);

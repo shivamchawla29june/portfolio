@@ -27,11 +27,29 @@ const Header = () => {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span><img src={images.logo} alt="profile_bg" style={{height: "150px", width: "120px"}}/></span>
+            <span>
+              <img
+                src={images.logo}
+                alt="profile_bg"
+                style={{ height: "150px", width: "120px" }}
+              />
+            </span>
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text" style={{ color: "#4466ff", textAlign: "center" }} >Hey, there! Welcome to</p>
-              <h1 className="head-text" style={{ color: "#4466ff" }}>Shivam's</h1>
-              <p className="p-text" style={{ color: "#4466ff", textAlign: "center" }} >Portfolio</p>
+              <p
+                className="p-text"
+                style={{ color: "#4466ff", textAlign: "center" }}
+              >
+                Hey, there! Welcome to
+              </p>
+              <h1 className="head-text" style={{ color: "#4466ff" }}>
+                Shivam's
+              </h1>
+              <p
+                className="p-text"
+                style={{ color: "#4466ff", textAlign: "center" }}
+              >
+                Portfolio
+              </p>
             </div>
           </div>
           <div className="tag-cmp app__flex">
@@ -42,7 +60,7 @@ const Header = () => {
                   "Full Stack Developer",
                   "MS CS @ UC San Diego",
                   "Former Intern @ Meta ",
-                  "Former Developer @ Western Digital"
+                  "Former Developer @ Western Digital",
                 ],
                 autoStart: true,
                 loop: true,

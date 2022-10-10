@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import "./About.scss";
 import { urlFor, client } from "../../client";
-import { AppWrap, MotionWrap} from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 // const abouts = [
 //   { title: "Web Developer", description: "", imgUrl: "" },
 //   { title: "Web Developer", description: "", imgUrl: "" },
@@ -22,7 +22,7 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-      This is <span>How</span> I spend my <span>time</span>.
+        This is <span>How</span> I spend my <span>time</span>.
       </h2>
       <div className="app__profiles">
         {abouts.map((about, index) => (
@@ -47,4 +47,8 @@ const About = () => {
   );
 };
 
-export default AppWrap( MotionWrap(About, 'app__about'), "about", "app__whitebg");
+export default AppWrap(
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
+);

@@ -1,10 +1,10 @@
-.app__study{
+.app__study {
     flex: 1;
     width: 100%;
     flex-direction: column;
 }
 
-.app__profilesStudy{
+.app__profilesStudy {
     // display: flex;
     // justify-content: center;
     // align-content: flex-start;
@@ -17,7 +17,7 @@
     margin-top: 2rem;
 }
 
-.app__profileStudy-item{
+.app__profileStudy-item {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@
     flex-wrap: wrap;
     margin: 2rem;
 
-    img{
+    img {
         width: 200px;
         vertical-align: middle;
         border-radius: 20%;
@@ -39,13 +39,13 @@
         width: 370px;
         margin: 2rem 4rem;
 
-        img{
+        img {
             height: 320px;
         }
     }
 }
 
-.app__profile-item-data{
+.app__profile-item-data {
     // width: 200px;
     display: flex;
     justify-content: flex-start;

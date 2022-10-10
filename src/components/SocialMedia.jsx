@@ -1,7 +1,7 @@
 import React from "react";
 import { BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SocialMedia = () => {
   return (

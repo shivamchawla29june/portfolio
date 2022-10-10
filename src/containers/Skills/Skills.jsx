@@ -26,12 +26,13 @@ const Skills = () => {
     });
   }, []);
 
-
-  experience.sort((a,b) => -(a.year - b.year));
+  experience.sort((a, b) => -(a.year - b.year));
 
   return (
     <>
-      <h2 className="head-text"><span>Skills and Experience</span></h2>
+      <h2 className="head-text">
+        <span>Skills and Experience</span>
+      </h2>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
           {skills?.map((skill) => (
@@ -89,9 +90,12 @@ const Skills = () => {
         </motion.div>
         {/* <div className="app__skills-detail" style={{color:"black"}}>Hover on Title for Details.</div> */}
       </div>
-      
     </>
   );
 };
 
-export default AppWrap(MotionWrap(Skills, "app__skills"), "skills", "app__whitebg");
+export default AppWrap(
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
+);
